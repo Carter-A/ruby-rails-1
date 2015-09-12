@@ -1,0 +1,18 @@
+<div class="container">
+	<div class="row">
+		<% @tasks.each do |t| %>
+		<div class="task">
+			<p><%= t.todo %></p>
+		</div>
+		<% end %>
+
+		<%= form_for(@task) do |f| %>
+			<div class="field">
+				<p><%= f.text_area :todo, :placeholder => "Add a Task" %></p>
+			</div>
+			<div class="action">
+				<p><%= f.submit "Create" %></p>
+			</div>
+		<% end %>
+	</div>
+</div>
