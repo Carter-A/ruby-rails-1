@@ -1,6 +1,16 @@
-<div class="main">
-	<div class="container">
-		<h1>Andrew Carter</h1>
-		<p>First Rails App Practice</p>
+<div class="container">
+	<div class="row">
+		<% @tasks.each do |t| %>
+		<div class="task">
+			<% @tasks_id = t.id %>
+			<%= link_to task_path(@tasks_id), method: :delete do %>
+			<button class="btn btn-info btn-sm">Delete</button>
+			<% end %>
+
+			<p><%= t.todo %></p>
+			
+
+		</div>
+		<% end %>
 	</div>
 </div>

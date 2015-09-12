@@ -3,10 +3,19 @@
 <head>
   <title>Andrew Carter</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+	<div class="container-fluid">
+		<div class="jumbotron">
+			<h1 style="text-align:center;">Todo Application</h1>
+			<%= link_to 'New Task', new_task_path, class: 'btn btn-primary' %>
+		</div>
+	</div>
+</header>
+
 
 <%= yield %>
 

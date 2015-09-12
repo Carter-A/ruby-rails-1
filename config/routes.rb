@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get '/home' => 'pages#home'
+  root to: 'pages#home'
+  post '/' => 'tasks#new'
+  resources :tasks
+  delete '/tasks/:id' => 'tasks#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
